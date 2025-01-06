@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/web-of-Hieu/static/css/main.974bbf6e.css",
-    "main.js": "/web-of-Hieu/static/js/main.d67de1ee.js",
+    "main.css": "/web-of-Hieu/static/css/main.944cdf7e.css",
+    "main.js": "/web-of-Hieu/static/js/main.1147b3e8.js",
     "static/css/643.f59b506e.chunk.css": "/web-of-Hieu/static/css/643.f59b506e.chunk.css",
-    "static/js/643.64631014.chunk.js": "/web-of-Hieu/static/js/643.64631014.chunk.js",
+    "static/js/643.9d942d0b.chunk.js": "/web-of-Hieu/static/js/643.9d942d0b.chunk.js",
     "static/css/119.536b06f6.chunk.css": "/web-of-Hieu/static/css/119.536b06f6.chunk.css",
-    "static/js/119.4a2f2777.chunk.js": "/web-of-Hieu/static/js/119.4a2f2777.chunk.js",
+    "static/js/119.fb601a3c.chunk.js": "/web-of-Hieu/static/js/119.fb601a3c.chunk.js",
     "static/css/872.70916dc3.chunk.css": "/web-of-Hieu/static/css/872.70916dc3.chunk.css",
-    "static/js/872.ebbab5d6.chunk.js": "/web-of-Hieu/static/js/872.ebbab5d6.chunk.js",
+    "static/js/872.837becf2.chunk.js": "/web-of-Hieu/static/js/872.837becf2.chunk.js",
     "static/js/787.174a0e6e.chunk.js": "/web-of-Hieu/static/js/787.174a0e6e.chunk.js",
     "static/media/sliderAboutPage.png": "/web-of-Hieu/static/media/sliderAboutPage.ccc899bfcb576813f969.png",
     "index.html": "/web-of-Hieu/index.html",
-    "main.974bbf6e.css.map": "/web-of-Hieu/static/css/main.974bbf6e.css.map",
-    "main.d67de1ee.js.map": "/web-of-Hieu/static/js/main.d67de1ee.js.map",
+    "main.944cdf7e.css.map": "/web-of-Hieu/static/css/main.944cdf7e.css.map",
+    "main.1147b3e8.js.map": "/web-of-Hieu/static/js/main.1147b3e8.js.map",
     "643.f59b506e.chunk.css.map": "/web-of-Hieu/static/css/643.f59b506e.chunk.css.map",
-    "643.64631014.chunk.js.map": "/web-of-Hieu/static/js/643.64631014.chunk.js.map",
+    "643.9d942d0b.chunk.js.map": "/web-of-Hieu/static/js/643.9d942d0b.chunk.js.map",
     "119.536b06f6.chunk.css.map": "/web-of-Hieu/static/css/119.536b06f6.chunk.css.map",
-    "119.4a2f2777.chunk.js.map": "/web-of-Hieu/static/js/119.4a2f2777.chunk.js.map",
+    "119.fb601a3c.chunk.js.map": "/web-of-Hieu/static/js/119.fb601a3c.chunk.js.map",
     "872.70916dc3.chunk.css.map": "/web-of-Hieu/static/css/872.70916dc3.chunk.css.map",
-    "872.ebbab5d6.chunk.js.map": "/web-of-Hieu/static/js/872.ebbab5d6.chunk.js.map",
+    "872.837becf2.chunk.js.map": "/web-of-Hieu/static/js/872.837becf2.chunk.js.map",
     "787.174a0e6e.chunk.js.map": "/web-of-Hieu/static/js/787.174a0e6e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.974bbf6e.css",
-    "static/js/main.d67de1ee.js"
+    "static/css/main.944cdf7e.css",
+    "static/js/main.1147b3e8.js"
   ]
 }

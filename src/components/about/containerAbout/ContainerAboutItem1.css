@@ -1,0 +1,41 @@
+.container-about1 .container-left {
+    gap: 10px;
+}
+
+
+.container-about1 .container-left span {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 15px 20px 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    display: inline-block;
+    min-width: fit-content;
+    align-self: flex-start;
+}
+
+.container-about1 .container-left p {
+    font-size: 35px;
+}
+
+.container-about1 .container-left h2 {
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+
+.container-about1 .container-right p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 29px 0;
+    opacity: 0.9;
+}
+
+.container-about1 .container-right a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+}

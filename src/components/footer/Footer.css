@@ -1,0 +1,96 @@
+/* Định nghĩa biến màu sắc */
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --highlight-color: #ffcc00;
+    /* Màu nổi bật */
+}
+
+/* Footer */
+#footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 20px;
+}
+
+/* Footer nội dung */
+#footer span {
+    font-size: 30px;
+}
+
+#footer span:nth-child(2) {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+#footer a {
+    margin-top: 20px;
+    font-size: 30px;
+    color: var(--secondary-color);
+    display: block;
+    transition: transform 0.3s ease;
+    /* Thêm hiệu ứng khi hover */
+}
+
+/* Cuộn văn bản */
+.scrolling-text {
+    display: flex;
+    align-items: center;
+    /* Căn giữa văn bản theo chiều dọc */
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 80px 0;
+}
+
+.scrolling-text h2 {
+    display: inline-block;
+    font-size: 120px;
+    animation: scrollText 25s linear infinite;
+    /* Thay đổi thời gian cuộn */
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Icons */
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons a {
+    position: relative;
+    display: inline-block;
+}
+
+.icons a .icon {
+    font-size: 30px;
+    color: var(--secondary-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Thêm hiệu ứng chuyển màu */
+}
+
+/* Hover effect */
+.icons a:hover .icon {
+    transform: rotate(15deg);
+    color: var(--highlight-color);
+    /* Màu nổi bật khi hover */
+}
+
+.icons a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    /* Thêm hiệu ứng phóng to */
+}

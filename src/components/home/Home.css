@@ -1,0 +1,64 @@
+.video-home {
+    padding: 10px;
+}
+
+.link-to-about {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-to-about p {
+    opacity: 0.8;
+    line-height: 1.6;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    max-width: 80%;
+}
+
+.link-to-about a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.link-to-about a:hover {
+    color: #c89836;
+}
+
+.logos-brand p,
+.logos-brand h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 60px;
+}
+
+.logos-brand h1 {
+    font-weight: 900;
+    margin-bottom: 80px;
+}
+
+.logos-brand-list {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.logos-brand-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+.logos-brand-item img {
+    max-width: 140px;
+    height: auto;
+}

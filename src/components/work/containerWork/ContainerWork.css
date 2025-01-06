@@ -1,0 +1,72 @@
+.container-work {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+}
+
+.navbar-container-work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.navbar-container-work li {
+    font-size: 20px;
+    padding: 5px 15px;
+    list-style: none;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.navbar-container-work li:active {
+    opacity: 1;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    transition: opacity 0.3s ease-in-out;
+    /* Thêm transition để làm mượt */
+    opacity: 1;
+}
+
+.image-gallery .image-group {
+    flex: 1 1 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.image-gallery .image-item {
+    opacity: 0;
+    /* Khởi tạo ảnh không hiển thị */
+    animation: none;
+}
+
+.image-gallery.show-animation .image-item {
+    animation: showUp 0.6s ease-in-out forwards;
+    opacity: 1;
+    /* Ảnh hiển thị sau animation */
+}
+
+
+.image-gallery .image {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 4%;
+}
+
+@keyframes showUp {
+
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

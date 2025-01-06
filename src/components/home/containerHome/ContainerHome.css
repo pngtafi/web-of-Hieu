@@ -1,0 +1,42 @@
+/* Đảm bảo các thẻ summary xát gần nhau */
+.container-home {
+    background-color: #fff;
+    color: #000;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+details {}
+
+/* Styling cho summary */
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    list-style-type: none;
+}
+
+/* Ẩn phần nội dung (p) mặc định */
+details p {
+    display: none;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+/* Khi thẻ details mở, hiển thị nội dung */
+details[open] p {
+    display: block;
+}
+
+.container-home .container-left h2 {
+    font-size: 60px;
+    letter-spacing: 1px;
+}
+
+.container-home .container-left h2:first-child {
+    font-weight: 100;
+}
+
+.container-home .container-left h2:last-child {
+    font-weight: 800;
+}

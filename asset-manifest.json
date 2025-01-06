@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/web-of-Hieu/static/css/main.944cdf7e.css",
-    "main.js": "/web-of-Hieu/static/js/main.1147b3e8.js",
-    "static/css/643.f59b506e.chunk.css": "/web-of-Hieu/static/css/643.f59b506e.chunk.css",
+    "main.css": "/web-of-Hieu/static/css/main.dd2ba99b.css",
+    "main.js": "/web-of-Hieu/static/js/main.00e933d3.js",
+    "static/css/643.6373ccd9.chunk.css": "/web-of-Hieu/static/css/643.6373ccd9.chunk.css",
     "static/js/643.9d942d0b.chunk.js": "/web-of-Hieu/static/js/643.9d942d0b.chunk.js",
     "static/css/119.536b06f6.chunk.css": "/web-of-Hieu/static/css/119.536b06f6.chunk.css",
     "static/js/119.fb601a3c.chunk.js": "/web-of-Hieu/static/js/119.fb601a3c.chunk.js",
-    "static/css/872.70916dc3.chunk.css": "/web-of-Hieu/static/css/872.70916dc3.chunk.css",
+    "static/css/872.d04eaf31.chunk.css": "/web-of-Hieu/static/css/872.d04eaf31.chunk.css",
     "static/js/872.837becf2.chunk.js": "/web-of-Hieu/static/js/872.837becf2.chunk.js",
     "static/js/787.174a0e6e.chunk.js": "/web-of-Hieu/static/js/787.174a0e6e.chunk.js",
     "static/media/sliderAboutPage.png": "/web-of-Hieu/static/media/sliderAboutPage.ccc899bfcb576813f969.png",
     "index.html": "/web-of-Hieu/index.html",
-    "main.944cdf7e.css.map": "/web-of-Hieu/static/css/main.944cdf7e.css.map",
-    "main.1147b3e8.js.map": "/web-of-Hieu/static/js/main.1147b3e8.js.map",
-    "643.f59b506e.chunk.css.map": "/web-of-Hieu/static/css/643.f59b506e.chunk.css.map",
+    "main.dd2ba99b.css.map": "/web-of-Hieu/static/css/main.dd2ba99b.css.map",
+    "main.00e933d3.js.map": "/web-of-Hieu/static/js/main.00e933d3.js.map",
+    "643.6373ccd9.chunk.css.map": "/web-of-Hieu/static/css/643.6373ccd9.chunk.css.map",
     "643.9d942d0b.chunk.js.map": "/web-of-Hieu/static/js/643.9d942d0b.chunk.js.map",
     "119.536b06f6.chunk.css.map": "/web-of-Hieu/static/css/119.536b06f6.chunk.css.map",
     "119.fb601a3c.chunk.js.map": "/web-of-Hieu/static/js/119.fb601a3c.chunk.js.map",
-    "872.70916dc3.chunk.css.map": "/web-of-Hieu/static/css/872.70916dc3.chunk.css.map",
+    "872.d04eaf31.chunk.css.map": "/web-of-Hieu/static/css/872.d04eaf31.chunk.css.map",
     "872.837becf2.chunk.js.map": "/web-of-Hieu/static/js/872.837becf2.chunk.js.map",
     "787.174a0e6e.chunk.js.map": "/web-of-Hieu/static/js/787.174a0e6e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.944cdf7e.css",
-    "static/js/main.1147b3e8.js"
+    "static/css/main.dd2ba99b.css",
+    "static/js/main.00e933d3.js"
   ]
 }

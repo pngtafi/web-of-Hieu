@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import images from '../../imagesData';
+import images from '../../work/imagesDataWork';
 import './FeatureWorks.css';
 
 const FeatureWorks = () => {

@@ -2,7 +2,6 @@
 :root {
     --primary-color: #000;
     --secondary-color: #fff;
-    --highlight-color: #ffcc00;
     /* Màu nổi bật */
 }
 
@@ -85,8 +84,6 @@
 /* Hover effect */
 .icons a:hover .icon {
     transform: rotate(15deg);
-    color: var(--highlight-color);
-    /* Màu nổi bật khi hover */
 }
 
 .icons a:hover {

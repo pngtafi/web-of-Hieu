@@ -25,37 +25,56 @@
 }
 
 .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    transition: opacity 0.3s ease-in-out;
-    /* Thêm transition để làm mượt */
-    opacity: 1;
+    column-count: 4;
+    column-gap: 10px;
+    padding: 0 10px;
+    opacity: 0;
+    /* Ban đầu ẩn */
+    transform: translateY(20px);
+    /* Vị trí ban đầu */
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    /* Hiệu ứng mượt */
 }
 
-.image-gallery .image-group {
-    flex: 1 1 25%;
-    max-width: 25%;
-    padding: 0 4px;
+.image-gallery.show-animation {
+    opacity: 1;
+    /* Hiển thị ảnh */
+    transform: translateY(0);
+    /* Trả về vị trí ban đầu */
 }
 
 .image-gallery .image-item {
-    opacity: 0;
-    /* Khởi tạo ảnh không hiển thị */
+    position: relative;
+    overflow: hidden;
+    border-radius: 4%;
     animation: none;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .image-gallery.show-animation .image-item {
     animation: showUp 0.6s ease-in-out forwards;
-    opacity: 1;
-    /* Ảnh hiển thị sau animation */
 }
-
 
 .image-gallery .image {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
     border-radius: 4%;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.image-gallery .image-item:hover .image {
+    transform: scale(1.1);
+    /* Phóng to ảnh khi hover */
+    filter: brightness(0.9);
+    /* Làm tối ảnh một chút */
+}
+
+/* Hiệu ứng xoay nhẹ khi hover */
+.image-gallery .image-item:hover {
+    transform: rotate(2deg);
+    transition: transform 0.3s ease-in-out;
 }
 
 @keyframes showUp {

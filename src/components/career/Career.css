@@ -1,0 +1,111 @@
+.container-career {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 120px 80px 40px 80px;
+}
+
+.container-career h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.container-career .career-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    opacity: 0;
+}
+
+.container-career .career-list.loaded {
+    opacity: 1;
+}
+
+
+.container-career .career-item {
+    background-color: #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 40px;
+    animation: fadeInUp 1.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    transform: translateY(var(--start-position));
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(var(--start-position));
+        /* Ban đầu ở dưới */
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Di chuyển lên vị trí ban đầu */
+    }
+}
+
+.container-career .career-item:nth-child(1) {
+    --start-position: 50px;
+    animation-delay: 0.2s;
+    /* Độ trễ khi phần tử 1 xuất hiện */
+}
+
+.container-career .career-item:nth-child(2) {
+    --start-position: 70px;
+    animation-delay: 0.4s;
+    /* Độ trễ khi phần tử 2 xuất hiện */
+}
+
+.container-career .career-item:nth-child(3) {
+    --start-position: 90px;
+    animation-delay: 0.6s;
+    /* Độ trễ khi phần tử 3 xuất hiện */
+}
+
+.container-career .career-item.visible {
+    visibility: visible;
+}
+
+.container-career .career-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.career-item>div {
+    margin: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-career .career-item h3 {
+    margin: 10px 0;
+}
+
+.container-career .career-item p {
+    padding-bottom: 20px;
+    opacity: 0.6;
+}
+
+.container-career .career-item .date {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 100%;
+    opacity: 1;
+}

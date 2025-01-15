@@ -10,11 +10,11 @@
     z-index: 1;
 }
 
-#slider.prev .list .item:nth-child(2) {
+#slider.prev .list .item {
     z-index: 2;
 }
 
-#slider.prev .list .item:nth-child(2) img {
+#slider.prev .list .item img {
     animation: outFrame 0.5s linear 1 forwards;
     position: absolute;
     bottom: 0;
@@ -31,11 +31,11 @@
     }
 }
 
-#slider.prev .list .item:nth-child(2) .content .author,
-#slider.prev .list .item:nth-child(2) .content .title,
-#slider.prev .list .item:nth-child(2) .content .topic,
-#slider.prev .list .item:nth-child(2) .content .des,
-#slider.prev .list .item:nth-child(2) .content .buttons {
+#slider.prev .list .item .content .author,
+#slider.prev .list .item .content .title,
+#slider.prev .list .item .content .topic,
+#slider.prev .list .item .content .des,
+#slider.prev .list .item .content .buttons {
     animation: contentOut 1.5s linear 1 forwards !important;
 }
 
@@ -51,7 +51,7 @@
     pointer-events: none;
 }
 
-#slider.next .list .item:nth-child(1) img {
+#slider.next .list .item img {
     width: 140px;
     height: 115px;
     position: absolute;
@@ -140,11 +140,11 @@
     z-index: 1;
 }
 
-#slider .list .item:nth-child(1) .content .author,
-#slider .list .item:nth-child(1) .content .title,
-#slider .list .item:nth-child(1) .content .topic,
-#slider .list .item:nth-child(1) .content .des,
-#slider .list .item:nth-child(1) .content .buttons {
+#slider .list .item .content .author,
+#slider .list .item .content .title,
+#slider .list .item .content .topic,
+#slider .list .item .content .des,
+#slider .list .item .content .buttons {
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
@@ -294,4 +294,59 @@
     background-color: #f1683a;
     left: 0;
     top: 0;
+}
+
+/* CSS dành cho Mobile */
+@media (max-width: 739px) {
+    #slider {
+        height: 100vh;
+    }
+
+    #slider .list .item .content {
+        visibility: hidden;
+    }
+
+    #slider .list .item .content .author {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    #slider .list .item .content .title,
+    #slider .list .item .content .topic {
+        font-size: 1.5em;
+        line-height: 1.2em;
+    }
+
+    #slider .list .item .content .buttons {
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: 35px;
+        gap: 10px;
+    }
+
+    #slider .list .item .content button {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #slider .thumbnail {
+        visibility: hidden;
+    }
+
+    #slider .arrows {
+        top: 90%;
+        right: 50%;
+        transform: translateX(50%);
+        width: auto;
+        gap: 5px;
+    }
+
+    #slider .arrows button {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    #slider .time {
+        height: 2px;
+    }
 }

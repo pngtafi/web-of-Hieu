@@ -1,8 +1,8 @@
 import React from 'react';
 import './Container.css';
 
-const Container = ({ leftContent, rightContent, ContainerClasname }) => (
-    <div className={`container ${ContainerClasname}`}>
+const Container = ({ leftContent, rightContent, customClass, ContainerClasname }) => (
+    <div className={`container ${ContainerClasname || ''} ${customClass || ''}`}>
         <div className='container-left'>
             {leftContent.map((child, index) => (
                 <React.Fragment key={index}>{child}</React.Fragment>

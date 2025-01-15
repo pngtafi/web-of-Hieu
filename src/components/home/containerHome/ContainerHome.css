@@ -1,4 +1,3 @@
-/* Đảm bảo các thẻ summary xát gần nhau */
 .container-home {
     background-color: #fff;
     color: #000;
@@ -6,10 +5,12 @@
     padding-bottom: 120px;
 }
 
-details {}
+.toggle-section {
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+}
 
-/* Styling cho summary */
-details summary {
+.toggle-summary {
     cursor: pointer;
     font-weight: bold;
     padding: 10px;
@@ -17,15 +18,28 @@ details summary {
 }
 
 /* Ẩn phần nội dung (p) mặc định */
-details p {
+.toggle-section p,
+.toggle-section .child-container {
     display: none;
     padding: 10px;
     margin-top: 5px;
 }
 
-/* Khi thẻ details mở, hiển thị nội dung */
-details[open] p {
-    display: block;
+/* Khi thẻ div mở, hiển thị nội dung */
+.toggle-section.open p,
+.toggle-section.open .child-container {
+    display: flex;
+}
+
+/* Biểu tượng thay đổi khi mở/đóng */
+.toggle-section.open .toggle-summary::after {
+    content: "▲";
+    /* Thay đổi biểu tượng khi mở */
+}
+
+.toggle-section:not(.open) .toggle-summary::after {
+    content: "▼";
+    /* Biểu tượng cho thẻ đóng */
 }
 
 .container-home .container-left h2 {
@@ -39,4 +53,22 @@ details[open] p {
 
 .container-home .container-left h2:last-child {
     font-weight: 800;
+}
+
+.container-home .child-container {
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: flex-start;
+}
+
+.container-home .child-container .container-right {
+    height: auto;
+    padding: 0;
+}
+
+.container-home .child-container .container-right p {
+    flex-grow: 1;
+    padding-right: 68px;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SliderItem from './SliderItem';
 import ThumbnailItem from './ThumbnailItem';
 import PropTypes from 'prop-types';
@@ -9,77 +9,89 @@ const Slider = () => {
         {
             image: "/img1.jpg",
             author: "LUNDEV",
-            title: "DESIGN SLIDER",
-            titleThumb: " Name Slider",
-            descriptionThumb: " Description",
+            title: "DESIGN SLIDER 1",
+            titleThumb: "Name Slider 1",
+            descriptionThumb: "Description 1",
             topic: "ANIMAL",
-            description:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
             image: "/img2.jpg",
             author: "LUNDEV",
-            title: "DESIGN SLIDER",
-            titleThumb: " Name Slider",
-            descriptionThumb: " Description",
+            title: "DESIGN SLIDER 2",
+            titleThumb: "Name Slider 2",
+            descriptionThumb: "Description 2",
             topic: "ANIMAL",
-            description:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
             image: "/img3.jpg",
             author: "LUNDEV",
-            title: "DESIGN SLIDER",
-            titleThumb: " Name Slider",
-            descriptionThumb: " Description",
+            title: "DESIGN SLIDER 3",
+            titleThumb: "Name Slider 3",
+            descriptionThumb: "Description 3",
             topic: "ANIMAL",
-            description:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
         {
             image: "/img4.jpg",
             author: "LUNDEV",
-            title: "DESIGN SLIDER",
-            titleThumb: " Name Slider",
-            descriptionThumb: " Description",
+            title: "DESIGN SLIDER 4",
+            titleThumb: "Name Slider 4",
+            descriptionThumb: "Description 4",
             topic: "ANIMAL",
-            description:
-                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         },
     ];
 
-    const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
     const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
+        setCurrentSlideIndex((prev) => (prev + 1) % slides.length);
     };
 
     const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+        setCurrentSlideIndex((prev) => (prev - 1 + slides.length) % slides.length);
     };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 5000); // Tự động chuyển sau 5 giây
+        return () => clearInterval(interval); // Dọn dẹp interval khi component unmount
+    }, []); // Lắng nghe thay đổi của currentSlideIndex
+
+    const getThumbnailOrder = () => {
+        const orderedThumbnails = [...slides];
+        const rotateSlides = [...orderedThumbnails.slice(currentSlideIndex), ...orderedThumbnails.slice(0, currentSlideIndex)];
+        return rotateSlides;
+    };
+
+    const thumbnails = getThumbnailOrder();
+    const currentThumbnail = thumbnails[thumbnails.length - 1];
 
     return (
         <div id="slider">
             {/* List Item */}
             <div className="list">
-                {slides.map((slide, index) => (
-                    <SliderItem
-                        key={index}
-                        {...slide}
-                        isActive={index === currentSlide}
-                    />
-                ))}
+                <SliderItem
+                    image={currentThumbnail.image} // Hình ảnh từ phần tử cuối cùng trong thumbnails
+                    author={slides[currentSlideIndex].author}
+                    title={slides[currentSlideIndex].title}
+                    description={slides[currentSlideIndex].description}
+                    isActive
+                />
             </div>
 
             {/* Thumbnail Items */}
             <div className="thumbnail">
-                {slides.map((slide, index) => (
+                {thumbnails.map((slide, index) => (
                     <ThumbnailItem
                         key={index}
                         image={slide.image}
-                        title={slide.title}
-                        description={slide.description}
-                        isActive={index === currentSlide}
+                        titleThumb={slide.titleThumb}
+                        descriptionThumb={slide.descriptionThumb}
+                        isActive={index === thumbnails.length - 1} // Phần tử cuối là ảnh hiện tại
                     />
                 ))}
             </div>
@@ -93,9 +105,6 @@ const Slider = () => {
                     &#8250;
                 </button>
             </div>
-
-            {/* Time Running */}
-            <div className="time"></div>
         </div>
     );
 };
